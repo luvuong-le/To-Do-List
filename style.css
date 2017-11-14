@@ -1,0 +1,284 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    background:#333;
+}
+
+#container {
+    margin: auto;
+    width: 70%;
+    box-shadow: 5px 5px 5px #888888;
+    border-top-right-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+
+/* To do list header, input fields, task list */
+.toDoListHeader {
+    width: 100%;
+    border: 1px solid #000;
+    text-align: center;
+    background: #2AB7A9;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.toDoListInput {
+    border: 1px solid #000;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+}
+
+/* Task Input */
+
+.taskInputContainer {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10vh;
+    clear: both;
+    display: inline-block;
+}
+
+#taskInput {
+    width: 75%;
+    margin-top: 20px;
+    font-weight: bolder;
+}
+
+#taskSubmit {
+    width: 20%;
+    border: 0;
+    height: 40px;
+    cursor: pointer;
+    margin-top: 20px; 
+    margin-left: 20px;
+    background-color: #2AB7A9; 
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+#taskSubmit:hover, .removeAllBtn:hover {
+    opacity: 0.5;
+}
+
+/* Search Input */
+
+.searchInputContainer {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 10vh;
+    clear: both;
+    display: inline-block;
+}
+
+#searchInput {
+    width: 75%;
+    float: left;
+    font-weight: bolder;
+}
+
+*::-webkit-input-placeholder {
+    font-weight: bolder;
+}
+
+#searchIcon {
+    width: 20%;
+    border: 0;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 25px;
+    user-select: none;
+    background-color: #2AB7A9; 
+    pointer-events: none;
+    border-radius: 2px;
+    box-shadow: 2px 2px 2px #888888;
+}
+
+/* Task List Area */
+
+.task-list-container {
+    height: 45vh;
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #fff;
+}
+
+#task-list {
+    overflow: auto;
+    height: 100%;
+}
+
+.task-list-functions {
+    border: 1px solid #000;
+    height: 13vh;
+    text-align: center;
+    background-color: #fff;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+/* Card CSS */
+.card-panel:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.closeBtn, .editBtn {
+    color: #fff;
+    user-select: none;
+    -ms-user-select: none;
+}
+
+.closeBtn:hover, .editBtn:hover {
+    background: #000;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checked { 
+    text-decoration: line-through;
+}
+
+.task-item {
+    user-select: none;
+    -ms-user-select: none;
+    animation: fade;
+    animation-duration: 1s;
+}
+
+.card-panel {
+    user-select: none;
+    -ms-user-select: none;
+    word-wrap: break-word;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+/* Laptop Screens */
+@media screen and (max-width: 1366px) {
+    #taskInput {
+        width: 60%;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+
+    #taskSubmit {
+        width: 35%;
+        border: 0;
+        height: 40px;
+        cursor: pointer;
+        margin-top: 20px; 
+        margin-left: 20px;
+        background-color: #2AB7A9; 
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 15px;
+        box-shadow: 2px 2px 2px #888888;
+    }
+
+    #searchInput {
+        margin-top: 10px;
+        width: 60%;
+        float: left;
+        font-weight: bolder;
+    }
+
+    #searchIcon {
+        margin-top: 15px;
+        width: 35%;
+        border: 0;
+        height: 40px;
+        cursor: pointer;
+        margin-left: 25px;
+        user-select: none;
+        background-color: #2AB7A9; 
+        pointer-events: none;
+        border-radius: 2px;
+        box-shadow: 2px 2px 2px #888888;
+    }
+}
+
+/* Mobile screens */
+@media screen and (max-width: 768px) {
+
+    #container {
+        width: 100%;
+        height: 100vh;
+        margin: 20px auto;
+        box-shadow: 10px 10px 5px #888888;
+    }
+
+    .toDoListHeader {
+        width: 100%;
+        border: 1px solid #000;
+        text-align: center;
+        background: #2AB7A9;
+        border-top-left-radius: 0em;
+        border-top-right-radius: 0em;
+    }
+
+    #taskInput {
+        width: 50%;
+        margin-top: 20px;
+        font-weight: bolder;
+    }
+
+    #taskSubmit {
+        width: 40%;
+        border: 0;
+        height: 40px;
+        cursor: pointer;
+        margin-top: 20px; 
+        margin-left: 20px;
+        background-color: #2AB7A9; 
+        border-radius: 2px;
+        text-transform: uppercase;
+        font-size: 15px;
+        box-shadow: 2px 2px 2px #888888;
+    }
+
+    #searchInput {
+        width: 50%;
+        float: left;
+        font-weight: bolder;
+    }
+
+    #searchIcon {
+        width: 40%;
+        border: 0;
+        height: 40px;
+        cursor: pointer;
+        margin-left: 25px;
+        user-select: none;
+        background-color: #2AB7A9; 
+        pointer-events: none;
+        border-radius: 2px;
+        box-shadow: 2px 2px 2px #888888;
+    }
+
+    .task-list-functions {
+        border-bottom-left-radius: 0em;
+        border-bottom-right-radius: 0em;
+    }
+
+    .delete-icon  {
+        float: right;
+        width: 20%;
+    }
+}

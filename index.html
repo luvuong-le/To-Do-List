@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <!-- Main wrapper for the to do list -->
+    <div id="container">
+        <div class="toDoListHeader">
+            <h4 class="title">To-Do List</h4>
+        </div>
+        <div class="toDoListInput">
+            <div class="taskInputContainer">
+                <form>
+                    <input type="text" id="taskInput" placeholder="Add a new task" required>
+                    <button type="submit" id="taskSubmit" class="waves-effect waves-light btn" >Add Task<i class="material-icons left">add</i>
+                </form>
+            </div>
+            <div class="searchInputContainer">
+                <input type="text" id="searchInput" placeholder="Search for a task">
+                <button id="searchIcon" class="waves-effect waves-light btn">
+                    <i class="small material-icons center">search</i>
+                </button>
+            </div>
+        </div>
+        <div class="task-list-container">
+            <ul id="task-list">
+                <!-- <li class="task-item">
+                    <div class="card-panel blue">
+                        <span class="white-text">Do my chores!<i class="close small material-icons right">delete_sweep</i></span>
+                    </div>
+                </li>
+                 -->
+            </ul>
+        </div>
+        <div class="task-list-functions">
+            <br/>
+            <a id="removeAllBtn" class="waves-effect waves-light btn">
+                Remove All<i class="material-icons right">delete_sweep</i>
+            </a>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
